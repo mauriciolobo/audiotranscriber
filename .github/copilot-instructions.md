@@ -1,0 +1,1 @@
+Use naudio official documentation (https://github.com/naudio/NAudio/tree/master/Docs)
