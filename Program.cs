@@ -1,13 +1,15 @@
-﻿using System;
-using NAudio.Wave;
+﻿using NAudio.Wave;
 using NAudio.MediaFoundation;
+using DotNetEnv;
 
 class Program
 {
-    const string groqApiKey = "GROQ_API_KEY"; // Set your GROQ API
-    
     static void Main(string[] args)
     {
+        Env.Load();
+
+        string? groqApiKey =  Environment.GetEnvironmentVariable("GROQ_API_KEY"); // Load the API key from environment variable
+
         Console.WriteLine("Capturing loopback audio (what you hear)...");
         string outputFilePath = "loopback_capture.wav";
         using (var capture = new WasapiLoopbackCapture())

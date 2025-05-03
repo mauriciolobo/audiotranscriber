@@ -38,3 +38,6 @@ _ReSharper*/
 # Audio files
 *.mp3
 *.wav
+
+# Environment variables
+.env
