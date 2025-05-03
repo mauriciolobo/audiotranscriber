@@ -46,6 +46,8 @@ class Program
                 MediaFoundationEncoder.EncodeToMp3(reader, mp3FilePath, 16000); // 16 kbps
             }
             Console.WriteLine($"WAV converted to low-bitrate MP3: {mp3FilePath}");
+            // Clean up the original WAV file if needed
+            File.Delete(outputFilePath);
         }
         catch (Exception ex)
         {
